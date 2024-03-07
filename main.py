@@ -1,4 +1,14 @@
-import streamlit as st
 import pandas as pd
 
-st.title('MINOTAUR (RP-6306-03) Dashboard')
+class File():
+    def __init__(self, filepath):
+        self.filepath = filepath
+
+    def readfile(self):
+        try:
+            print(pd.read_excel(self.url))
+        except:
+            raise ImportError('File type not in .xlsx format')
+        
+
+File(r'C:\Users\AdamPetrone\OneDrive - Repare Therapeutics\Desktop')
